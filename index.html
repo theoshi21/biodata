@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title> Showing All Information </title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Anton&family=Maven+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+	<style> 
+	.header
+	{
+	  position: fixed;
+	  top: 0px;
+	  left: 0px;
+          float: left;
+	  max-width: 25%;
+	  padding: 17px;
+	  height: 100vh;
+	  width: 100%;
+	  background-color: #ccb7ae;
+	  text-align: center;
+	  font-family: 'Anton', sans-serif;
+	  z-index: 1;
+	}
+
+	.body
+	{
+	position: fixed;
+	z-index: 0;
+	background-color: #ffe5d8;
+	top: 0px;
+	float: right;
+	left: 27%;
+	width: 100%;
+	max-width: 75%;
+	height: 100vh;
+	font-family: 'Maven Pro', sans-serif;
+	}
+
+	#pic
+	{
+	max-width: 65%;
+	border: 2px solid black;
+
+	}
+
+	.bold
+	{
+	  font-weight: bold;
+	  font-family: 'Maven Pro', sans-serif;
+	}
+
+	table
+	{
+	text-align: left;
+	padding: 5px;
+	line-height: 6vh;
+	font-size: 15px;
+	}
+
+	.info
+	{
+	font-family: 'Maven Pro', sans-serif;
+	font-size: 15px;
+	}
+
+
+	.title
+	{
+	font-family: anton;
+	}
+
+	#educ
+	{
+	margin: 15px;
+	}
+
+	#edu
+	{
+	margin-bottom: 0px;
+	}
+
+	hr
+	{
+	border: 2px outset grey;
+	}
+
+	button
+	{
+	width: 25%;
+	background-color: #8a764e;
+	border: 5px solid #8a764e;
+	font-family: maven pro;
+	font-weight: bold;
+	}
+	
+	button:hover{
+	background-color: #d9bb9b;
+	border: 5px solid #d9bb9b;
+	}
+
+
+	.bold:hover{
+	text-decoration: underline;		
+	}
+	
+	</style>
+</head>
+
+<body>
+<div class="header"> 
+<img src="pic.png" id="pic">
+<h1> MY BIO DATA</h1>
+
+<table>
+<tr>
+  <td class="bold" onclick="displayName()"> Name: 
+  <td id="name" class="info"> 
+</tr>
+
+<tr>
+  <td class="bold" onclick="displayAge()"> Age:
+  <td id="age" class="info"> 
+</tr>
+
+<tr>
+  <td class="bold" onclick="displayAddress()"> Address:
+  <td id="address" class="info"> 
+</tr>
+
+<tr>
+  <td class="bold" onclick="displayPhone()"> Phone Number: 
+  <td id="phone" class="info"> 
+</tr>
+
+<tr>
+  <td class="bold" onclick="displayEmail()"> Email Address:
+  <td id="email" class="info"> 
+</tr>
+
+</table>
+
+<button onclick="displayAll()">Show All </button>
+
+</div>
+<div class="body">
+<div id="educ">
+<h1 class="title" id="edu"> Educational Background </h1>
+<table>
+<tr>
+  <td class="bold" onclick="displayElem()"> Elementary
+  <td width=50% id="elementary" class="info"> 
+</tr>
+
+<tr>
+  <td class="bold" onclick="displayJHS()"> Junior High School
+  <td id="jhs" class="info"> 
+</tr>
+
+<tr>
+  <td class="bold" onclick="displaySHS()"> Senior High School
+  <td id="shs" class="info"> 
+</tr>
+
+<tr>
+  <td class="bold" onclick="displayCollege()"> College
+  <td id="college" class="info"> 
+</tr>
+</table>
+<button onclick="displayEducation()"> Display Educational Background </button>
+</div>
+&nbsp
+
+<hr>
+
+<div id="educ">
+<h1 class="title"> Experience and Skills </h1>
+<p class="bold" onclick="displayLanguage()"> Programming Languages </p>
+<p id="language" class="info"> </p>
+
+<p class="bold" onclick="displayOrg()"> Organizations </p>
+<p id="org" class="info"> </p>
+
+</table>
+<button onclick="displayExperience()">Display Experience and Skills </button>
+</div>
+</div>
+</div>
+
+</body>
+
+
+<script>
+function displayName(){
+	document.getElementById("name").innerHTML = "Kelvin P. Ignacio";
+}
+
+function displayAge(){
+	document.getElementById("age").innerHTML = "19 yrs. old";
+}
+
+function displayAddress(){
+	document.getElementById("address").innerHTML = "Cavite City";
+}
+
+function displayPhone(){
+	document.getElementById("phone").innerHTML = "+63 995 485 1003";
+}
+
+function displayEmail(){
+	document.getElementById("email").innerHTML = "kelvin.ignacio@adamson.edu.ph";
+}
+
+function displayAll(){
+	displayName();
+	displayAge();
+	displayAddress();
+	displayPhone();
+	displayEmail();
+}
+
+function displayEducation()
+{
+displayElem();
+displayJHS();
+displaySHS();
+displayCollege();
+}
+
+function displayElem(){
+	document.getElementById("elementary").innerHTML = "Ladislao Diwa Elementary School (2011 - 2017)";
+}
+
+function displayJHS(){
+	document.getElementById("jhs").innerHTML = "Cavite National High School - Junior High (2017 - 2021)";
+}
+
+function displaySHS(){
+	document.getElementById("shs").innerHTML = "Cavite National High School - Senior High (2021 - 2023)";
+}
+
+
+function displayCollege(){
+	document.getElementById("college").innerHTML = "Adamson University, BS in Computer Science (2023 - Present)";
+}
+
+function displayLanguage(){
+	document.getElementById("language").innerHTML = "I am knowledgable in Java, Python, C#, C++, HTML, CSS, and Javascript.";
+}
+
+function displayOrg(){
+	document.getElementById("org").innerHTML = "I am part of  the following organizations in my university: <br><b>> Adamson University Guild of Animation Makers and Esports (AdU GAME) </b><br><b>> League of Adamsonian Data Scientists (LEADS) </b><br><b>> Adamson Computer Science Society (ACOMSS)</b><br><b>> Physics Society of Adamson University (PSAU)</b>";
+}
+
+function displayExperience(){
+	displayLanguage();
+	displayOrg();
+}
+
+</script>
+
+
+</html>
